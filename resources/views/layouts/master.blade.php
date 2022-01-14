@@ -68,8 +68,6 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -79,7 +77,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Varietas
@@ -96,10 +94,110 @@
               <li class="nav-item">
                 <a href="/add-varietas" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Varietas</p>
+                  <p>Tambah Data</p>
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-lemon"></i>
+              <p>
+                Bentuk Buah
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/varietas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Bentuk Buah</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/add-varietas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Data</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-weight"></i>
+              <p>
+                Ukuran Buah 
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/varietas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ukuran Buah</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/add-varietas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Data</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-adjust"></i>
+              <p>
+                Warna Kulit Buah 
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/varietas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Warna Kulit Buah</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/add-varietas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Data</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-fill-drip"></i>
+              <p>
+                Warna Daging Buah 
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/varietas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Warna Daging Buah</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/add-varietas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Data</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Logout
+              </p>
+            </a>
           </li>
         </ul>
       </nav>
@@ -112,10 +210,7 @@
 
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.1.0
-    </div>
-    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2022 <a href="http://balitjestro.litbang.pertanian.go.id/">Balitjestro</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
