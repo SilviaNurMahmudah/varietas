@@ -8,7 +8,7 @@ use App\Varietas;
 class VarietasController extends Controller
 {
     public function getAll(){
-        $varietas = Varietas::all();
+        $varietas = Varietas::with('ukuran')->paginate(5);
         return view('varietas.varietas',['varietas'=> $varietas]);
     }
     public function getById($id){

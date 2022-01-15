@@ -19,3 +19,5 @@ Route::get('/varietas', 'VarietasController@getAll');
 Route::get('/varietas-{id}', 'VarietasController@getById');
 Route::get('/add-varietas', 'VarietasController@add');
 Route::get('/edit-varietas', 'VarietasController@edit');
+
+Route::get('/ukuran', 'UkuranController@getAll');

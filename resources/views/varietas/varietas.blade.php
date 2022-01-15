@@ -43,12 +43,13 @@
                   </tr>
                   </thead>
                   <tbody>
+                  @php $i=1 @endphp 
                   @foreach($varietas as $v)
                   <tr>
-                    <td></td>
+                    <td>{{$i++}}</td>
                     <td>{{$v->varietas}}</td>
                     <td>{{$v->area_pengembangan}}</td>
-                    <td>{{$v->tahun_pelepasan}}</td>
+                    <td>{{$v->ukuran->ukuran}}</td>
                     <td>                      
                       <a href="/varietas-{{$v->id}}" class="btn btn-primary btn-circle ">
                         <i class="fas fa-eye"></i>
