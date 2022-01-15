@@ -16,17 +16,17 @@ class CreateVarietasTable extends Migration
         Schema::create('varietas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('varietas');
-            $table->string('cita_rasa');
-            $table->string('bentuk_buah');
-            $table->string('ukuran_buah');
-            $table->string('warna_kulit');
-            $table->string('warna_daging');
-            $table->string('produktivitas');
+            $table->bigInteger('bentuk_id')->nullable();
+            $table->bigInteger('ukuran_id')->nullable();
+            $table->bigInteger('warna_kulit_id')->nullable();
+            $table->bigInteger('warna_daging_id')->nullable();
+            $table->string('cita_rasa')->nullable();
+            $table->string('produktivitas')->nullable();
             $table->string('area_pengembangan');
             $table->integer('ketinggian_awal');
             $table->integer('ketinggian_akhir');
-            $table->string('asal_pohon_induk');
-            $table->string('sentra_produksi');
+            $table->string('asal_pohon_induk')->nullable();
+            $table->string('sentra_produksi')->nullable();
             $table->year('tahun_pelepasan');
             $table->string('imageUrl');
             $table->timestamps();
