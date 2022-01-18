@@ -5,11 +5,9 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Varietas;
 
-class Ukuran extends Model
+class WarnaKulit extends Model
 {
-    protected $table = "ukurans";
-    protected $primarykey = "id";
-    protected $fillable = ['ukuran'];
+    protected $fillable = ['warna_kulit'];
 
     public function varietas() {
         return $this->hasMany(Varietas::class);
