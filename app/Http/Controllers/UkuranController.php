@@ -11,4 +11,16 @@ class UkuranController extends Controller
         $ukuran = Ukuran::all();
         return view('ukuran.ukuran',['ukuran'=> $ukuran]);
     }
+    public function add(){
+        return view('ukuran.add_ukuran');
+    }
+    public function create(Request $request) {
+        Ukuran::create([
+            'ukuran' => $request->ukuran,
+        ]);
+        return redirect('/ukuran');
+    }   
+    public function edit(){
+        return view('ukuran.edit_ukuran');
+    } 
 }

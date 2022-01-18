@@ -114,13 +114,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/varietas" class="nav-link">
+                <a href="/bentuk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Bentuk Buah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/add-varietas" class="nav-link">
+                <a href="/add-bentuk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>
@@ -143,7 +143,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/add-varietas" class="nav-link">
+                <a href="/add-ukuran" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>
@@ -160,13 +160,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/varietas" class="nav-link">
+                <a href="/warna_kulit" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Warna Kulit Buah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/add-varietas" class="nav-link">
+                <a href="/add-warna_kulit" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>
@@ -183,13 +183,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/varietas" class="nav-link">
+                <a href="/warna_daging" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Warna Daging Buah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/add-varietas" class="nav-link">
+                <a href="/add-warna_daging" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>
