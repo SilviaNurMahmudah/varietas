@@ -11,6 +11,10 @@
 |
 */
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/varietas', 'VarietasController@getAll');
 Route::get('/varietas-{id}', 'VarietasController@getById');
 Route::get('/add-varietas', 'VarietasController@add');
