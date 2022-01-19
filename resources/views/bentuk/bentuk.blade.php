@@ -47,10 +47,10 @@
                   <td>{{$i++}}</td>
                   <td>{{$b->bentuk}}</td>
                   <td>  
-                    <a href="/edit-bentuk"  class="btn btn-warning btn-circle ">
+                    <a href="/edit-bentuk-{{$b->id}}"  class="btn btn-warning btn-circle ">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger btn-circle ">
+                    <a href="/delete-bentuk-{{$b->id}}" class="btn btn-danger btn-circle ">
                       <i class="fas fa-trash"></i>
                     </a>
                   </td>

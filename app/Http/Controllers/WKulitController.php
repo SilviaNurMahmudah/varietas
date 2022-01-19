@@ -20,7 +20,19 @@ class WKulitController extends Controller
         ]);
         return redirect('/warna_kulit');
     } 
-    public function edit(){
-        return view('warna_kulit.edit_warnakulit');
+    public function edit($id){
+        $warna_kulit = WarnaKulit::find($id);
+        return view('warna_kulit.edit_wkulit',['warna_kulit'=>$warna_kulit]);
+    }
+    public function update($id, Request $request) {
+        $warna_kulit = WarnaKulit::find($id);
+        $warna_kulit->warna_kulit = $request->warna_kulit;
+        $warna_kulit->save();
+        return redirect('/warna_kulit');
+    }
+    public function delete($id){
+        $warna_kulit = WarnaKulit::find($id);
+        $warna_kulit->delete();
+        return redirect('/warna_kulit');
     } 
 }

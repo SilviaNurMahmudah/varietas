@@ -42,15 +42,15 @@
                 </thead>
                 <tbody>
                 @php $i=1 @endphp  
-                @foreach($warna_daging as $b)
+                @foreach($warna_daging as $d)
                 <tr>
                   <td>{{$i++}}</td>
-                  <td>{{$b->warna_daging}}</td>
+                  <td>{{$d->warna_daging}}</td>
                   <td>  
-                    <a href="/edit-warna_daging"  class="btn btn-warning btn-circle ">
+                    <a href="/edit-warna_daging-{{$d->id}}"  class="btn btn-warning btn-circle ">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger btn-circle ">
+                    <a href="/delete-warna_daging-{{$d->id}}" class="btn btn-danger btn-circle ">
                       <i class="fas fa-trash"></i>
                     </a>
                   </td>

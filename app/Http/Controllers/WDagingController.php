@@ -20,7 +20,19 @@ class WDagingController extends Controller
         ]);
         return redirect('/warna_daging');
     }
-    public function edit(){
-        return view('warna_daging.edit_warnadaging');
+    public function edit($id){
+        $warna_daging = WarnaDaging::find($id);
+        return view('warna_daging.edit_wdaging',['warna_daging'=>$warna_daging]);
+    }
+    public function update($id, Request $request) {
+        $warna_daging = WarnaDaging::find($id);
+        $warna_daging->warna_daging = $request->warna_daging;
+        $warna_daging->save();
+        return redirect('/warna_daging');
+    }
+    public function delete($id){
+        $warna_daging = WarnaDaging::find($id);
+        $warna_daging->delete();
+        return redirect('/warna_daging');
     } 
 }

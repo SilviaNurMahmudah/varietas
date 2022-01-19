@@ -20,7 +20,19 @@ class UkuranController extends Controller
         ]);
         return redirect('/ukuran');
     }   
-    public function edit(){
-        return view('ukuran.edit_ukuran');
+    public function edit($id){
+        $ukuran = Ukuran::find($id);
+        return view('ukuran.edit_ukuran',['ukuran'=>$ukuran]);
+    }
+    public function update($id, Request $request) {
+        $ukuran = Ukuran::find($id);
+        $ukuran->ukuran = $request->ukuran;
+        $ukuran->save();
+        return redirect('/ukuran');
+    }
+    public function delete($id){
+        $ukuran = Ukuran::find($id);
+        $ukuran->delete();
+        return redirect('/ukuran');
     } 
 }

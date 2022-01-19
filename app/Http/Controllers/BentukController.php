@@ -20,7 +20,19 @@ class BentukController extends Controller
         ]);
         return redirect('/bentuk');
     }
-    public function edit(){
-        return view('bentuk.edit_bentuk');
-    } 
+    public function edit($id){
+        $bentuk = Bentuk::find($id);
+        return view('bentuk.edit_bentuk',['bentuk'=>$bentuk]);
+    }
+    public function update($id, Request $request) {
+        $bentuk = Bentuk::find($id);
+        $bentuk->bentuk = $request->bentuk;
+        $bentuk->save();
+        return redirect('/bentuk');
+    }
+    public function delete($id){
+        $bentuk = Bentuk::find($id);
+        $bentuk->delete();
+        return redirect('/bentuk');
+    }  
 }
