@@ -7,6 +7,13 @@ use App\WarnaKulit;
 
 class WKulitController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(function($request, $next){
+            if(Gate::allows('manage')) return $next($request);
+            abort(403, 'Anda tidak memiliki cukup hak akses');
+        });
+    }
     public function getAll(){
         $warna_kulit = WarnaKulit::all();
         return view('warna_kulit.warna_kulit',['warna_kulit'=> $warna_kulit]);

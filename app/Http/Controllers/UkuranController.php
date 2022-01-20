@@ -7,6 +7,13 @@ use App\Ukuran;
 
 class UkuranController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(function($request, $next){
+            if(Gate::allows('manage')) return $next($request);
+            abort(403, 'Anda tidak memiliki cukup hak akses');
+        });
+    }
     public function getAll(){
         $ukuran = Ukuran::all();
         return view('ukuran.ukuran',['ukuran'=> $ukuran]);

@@ -7,6 +7,13 @@ use App\WarnaDaging;
 
 class WDagingController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(function($request, $next){
+            if(Gate::allows('manage')) return $next($request);
+            abort(403, 'Anda tidak memiliki cukup hak akses');
+        });
+    }
     public function getAll(){
         $warna_daging = WarnaDaging::all();
         return view('warna_daging.warna_daging',['warna_daging'=> $warna_daging]);

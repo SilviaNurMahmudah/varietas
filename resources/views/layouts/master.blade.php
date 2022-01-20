@@ -66,7 +66,7 @@
           <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin</a>
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -81,6 +81,7 @@
               </p>
             </a>
           </li>
+          @can('manage')
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -91,7 +92,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/varietas" class="nav-link">
+                <a href="{{ route('varietas') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Varietas</p>
                 </a>
@@ -198,11 +199,38 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <i class="nav-icon fas fa-user"></i>
               <p>
-                Logout
+                Users 
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Users</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Users</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          @endcan
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                  document.getElementById('logout-form').submit();">
+                  <i class="nav-icon fas fa-sign-out-alt"></i>
+                  {{ __('Logout') }}
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>           
           </li>
         </ul>
       </nav>
