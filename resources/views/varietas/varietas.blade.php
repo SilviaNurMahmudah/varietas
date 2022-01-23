@@ -26,6 +26,11 @@
         <!-- /.row -->
         <div class="row">
           <div class="col-12">
+            @if(session('status'))
+            <div class="alert alert-success">
+              {{session('status')}}
+            </div>
+            @endif
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Data Varietas</h3>
@@ -42,29 +47,34 @@
                     <th>Aksi</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  @php $i=1 @endphp 
-                  @foreach($varietas as $v)
+                  <tbody> 
+                  @foreach($varietas as $key => $v)
                   <tr>
-                    <td>{{$i++}}</td>
+                    <td>{{$varietas->firstItem()+$key}}</td>
                     <td>{{$v->varietas}}</td>
                     <td>{{$v->area_pengembangan}}</td>
-                    <td>{{$v->ukuran->ukuran}}</td>
+                    <td>{{$v->tahun_pelepasan}}</td>
                     <td>                      
                       <a href="/varietas-{{$v->id}}" class="btn btn-primary btn-circle ">
                         <i class="fas fa-eye"></i>
                       </a>
-                      <a href="/edit-varietas"  class="btn btn-warning btn-circle ">
+                      <a href="/edit-varietas-{{$v->id}}"  class="btn btn-warning btn-circle">
                         <i class="fas fa-edit"></i>
                       </a>
-                      <a href="#" class="btn btn-danger btn-circle ">
+                      <a href="/delete-varietas-{{$v->id}}" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus Data ?')">
                         <i class="fas fa-trash"></i>
                       </a>
                     </td>
                   </tr>
                   @endforeach
                   </tbody>
-                </table>
+                </table><br>
+                <div>
+                  Showing {{$varietas->firstItem()}} to {{$varietas->lastItem()}} of {{$varietas->total()}}
+                </div>
+                <div>
+                  {{ $varietas->links() }}
+                </div>
               </div>
               <!-- /.card-body -->
             </div>            

@@ -36,18 +36,52 @@
             </div>
             <div class="col-12 col-sm-6">
               <h3 class="my-3">{{$varietas->varietas}}</h3>
-              <p>
-                Cita Rasa : {{$varietas->cita_rasa}} <br>
-                Bentuk Buah: {{$varietas->bentuk_buah}} <br>
-                Ukuran Buah : {{$varietas->ukuran_buah}} <br>
-                Warna daging : {{$varietas->warna_daging}} <br>
-                Produktivitas : {{$varietas->produktivitas}} <br>
-                Area Pengembangan : {{$varietas->area_pengembangan}} <br>
-                Ketinggian : {{$varietas->ketinggian_awal}} - {{$varietas->ketinggian_akhir}} <br>
-                Asal Pohon Induk : {{$varietas->asal_pohon_induk}} <br>
-                Sentra Produksi : {{$varietas->sentra_produksi}} <br>
-                Tahun Pelepasan : {{$varietas->tahun_pelepasan}} <br>
-              </p>
+              <table>
+                <tr>
+                  <td>Cita Rasa</td>
+                  <td> : {{$varietas->cita_rasa}} </td>
+                </tr>
+                <tr>
+                  <td>Bentuk Buah</td>
+                  <td> : {{$varietas->bentuk->bentuk}} </td>
+                </tr>
+                <tr>
+                  <td>Ukuran Buah</td>
+                  <td> : {{$varietas->ukuran->ukuran}}</td>
+                </tr>
+                <tr>
+                  <td>Warna Kulit Buah</td>
+                  <td> : {{$varietas->warna_kulit->warna_kulit}}</td>
+                </tr>
+                <tr>
+                  <td>Warna Daging Buah</td>
+                  <td> : {{$varietas->warna_daging->warna_daging}}</td>
+                </tr>
+                <tr>
+                  <td>Produktivitas</td>
+                  <td> : {{$varietas->produktivitas}}</td>
+                </tr>
+                <tr>
+                  <td>Area Pengembangan</td>
+                  <td> : {{$varietas->area_pengembangan}}</td>
+                </tr>
+                <tr>
+                  <td>Ketinggian</td>
+                  <td> : {{$varietas->ketinggian_awal}} - {{$varietas->ketinggian_akhir}}</td>
+                </tr>
+                <tr>
+                  <td>Asal Pohon Induk</td>
+                  <td> : {{$varietas->asal_pohon_induk}}</td>
+                </tr>
+                <tr>
+                  <td>Sentra Produksi</td>
+                  <td> : {{$varietas->sentra_produksi}}</td>
+                </tr>
+                <tr>
+                  <td>Tahun Pelepasan</td>
+                  <td> : {{$varietas->tahun_pelepasan}}</td>
+                </tr>
+              </table>
               <hr>
             </div>
           </div>

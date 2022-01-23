@@ -16,10 +16,10 @@ class CreateVarietasTable extends Migration
         Schema::create('varietas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('varietas');
-            $table->bigInteger('bentuk_id')->nullable();
-            $table->bigInteger('ukuran_id')->nullable();
-            $table->bigInteger('warna_kulit_id')->nullable();
-            $table->bigInteger('warna_daging_id')->nullable();
+            $table->bigInteger('ukuran_id')->unsigned();
+            $table->bigInteger('bentuk_id')->unsigned();
+            $table->bigInteger('warna_kulit_id')->unsigned();
+            $table->bigInteger('warna_daging_id')->unsigned();
             $table->string('cita_rasa')->nullable();
             $table->string('produktivitas')->nullable();
             $table->string('area_pengembangan');
@@ -30,6 +30,15 @@ class CreateVarietasTable extends Migration
             $table->year('tahun_pelepasan');
             $table->string('imageUrl');
             $table->timestamps();
+
+            $table->foreign('ukuran_id')->references('id')->on('ukurans')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('bentuk_id')->references('id')->on('bentuks')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('warna_kulit_id')->references('id')->on('warna_kulits')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('warna_daging_id')->references('id')->on('warna_dagings')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

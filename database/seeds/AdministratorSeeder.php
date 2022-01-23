@@ -17,6 +17,14 @@ class AdministratorSeeder extends Seeder
         $admin->roles = "Admin";
         $admin->save();
         $this->command->info("Admin berhasil ditambah");
+
+        $operator = new \App\User;
+        $operator->name = "Operator";
+        $operator->email = "operator@gmail.com";
+        $operator->password = \Hash::make("operator123");
+        $operator->roles = "Operator";
+        $operator->save();
+        $this->command->info("Operator berhasil ditambah");
     }
 
 }
