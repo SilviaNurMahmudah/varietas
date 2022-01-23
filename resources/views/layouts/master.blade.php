@@ -24,7 +24,7 @@
       </li>
       
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index3.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -34,7 +34,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item d-none d-sm-inline-block">
-        <a class="nav-link">@php echo date('D/M/Y H:i'); @endphp</a>
+        <a class="nav-link">@php echo date('D/M/Y'); @endphp</a>
       </li>      
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -115,7 +115,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/bentuk" class="nav-link">
+                <a href="{{ route('bentuk') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Bentuk Buah</p>
                 </a>
@@ -138,7 +138,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/ukuran" class="nav-link">
+                <a href="{{ route('ukuran') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ukuran Buah</p>
                 </a>
@@ -161,7 +161,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/warna_kulit" class="nav-link">
+                <a href="{{ route('warna_kulit') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Warna Kulit Buah</p>
                 </a>
@@ -184,7 +184,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/warna_daging" class="nav-link">
+                <a href="{{ route('warna_daging') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Warna Daging Buah</p>
                 </a>
@@ -222,15 +222,15 @@
           </li>
           @endcan
           <li class="nav-item">
-              <a class="nav-link" href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">
-                  <i class="nav-icon fas fa-sign-out-alt"></i>
-                  {{ __('Logout') }}
-              </a>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-              </form>           
+            <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                <i class="nav-icon fas fa-sign-out-alt"></i>
+                <p>{{ __('Logout') }}</p>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>           
           </li>
         </ul>
       </nav>

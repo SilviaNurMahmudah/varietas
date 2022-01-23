@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use App\Bentuk;
 
 class BentukController extends Controller
@@ -25,7 +26,7 @@ class BentukController extends Controller
         Bentuk::create([
             'bentuk' => $request->bentuk,
         ]);
-        return redirect('/bentuk');
+        return redirect('/bentuk')->with('status', 'Data berhasil ditambahkan');
     }
     public function edit($id){
         $bentuk = Bentuk::find($id);
@@ -35,11 +36,11 @@ class BentukController extends Controller
         $bentuk = Bentuk::find($id);
         $bentuk->bentuk = $request->bentuk;
         $bentuk->save();
-        return redirect('/bentuk');
+        return redirect('/bentuk')->with('status', 'Data berhasil diedit');
     }
     public function delete($id){
         $bentuk = Bentuk::find($id);
         $bentuk->delete();
-        return redirect('/bentuk');
+        return redirect('/bentuk')->with('status', 'Data berhasil dihapus');
     }  
 }

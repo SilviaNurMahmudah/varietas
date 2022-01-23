@@ -27,6 +27,11 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
+            @if(session('status'))
+            <div class="alert alert-success">
+              {{session('status')}}
+            </div>
+            @endif
             <div class="card-header">
               <h3 class="card-title">Data Warna Kulit Buah</h3>
             </div>
@@ -47,10 +52,10 @@
                   <td>{{$i++}}</td>
                   <td>{{$k->warna_kulit}}</td>
                   <td>  
-                    <a href="/edit-warna_kulit-{{$k->id}}"   class="btn btn-warning btn-circle ">
+                    <a href="/edit-warna_kulit-{{$k->id}}"   class="btn btn-warning btn-circle">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="/delete-warna_kulit-{{$k->id}}" class="btn btn-danger btn-circle ">
+                    <a href="/delete-warna_kulit-{{$k->id}}" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus Data ?')">
                       <i class="fas fa-trash"></i>
                     </a>
                   </td>

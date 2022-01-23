@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use App\Ukuran;
 
 class UkuranController extends Controller
@@ -25,7 +26,7 @@ class UkuranController extends Controller
         Ukuran::create([
             'ukuran' => $request->ukuran,
         ]);
-        return redirect('/ukuran');
+        return redirect('/ukuran')->with('status', 'Data berhasil ditambahkan');
     }   
     public function edit($id){
         $ukuran = Ukuran::find($id);
@@ -35,11 +36,11 @@ class UkuranController extends Controller
         $ukuran = Ukuran::find($id);
         $ukuran->ukuran = $request->ukuran;
         $ukuran->save();
-        return redirect('/ukuran');
+        return redirect('/ukuran')->with('status', 'Data berhasil diedit');
     }
     public function delete($id){
         $ukuran = Ukuran::find($id);
         $ukuran->delete();
-        return redirect('/ukuran');
+        return redirect('/ukuran')->with('status', 'Data berhasil dihapus');
     } 
 }

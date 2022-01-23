@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use App\WarnaDaging;
 
 class WDagingController extends Controller
@@ -25,7 +26,7 @@ class WDagingController extends Controller
         WarnaDaging::create([
             'warna_daging' => $request->warna_daging,
         ]);
-        return redirect('/warna_daging');
+        return redirect('/warna_daging')->with('status', 'Data berhasil ditambahkan');
     }
     public function edit($id){
         $warna_daging = WarnaDaging::find($id);
@@ -35,11 +36,11 @@ class WDagingController extends Controller
         $warna_daging = WarnaDaging::find($id);
         $warna_daging->warna_daging = $request->warna_daging;
         $warna_daging->save();
-        return redirect('/warna_daging');
+        return redirect('/warna_daging')->with('status', 'Data berhasil diedit');
     }
     public function delete($id){
         $warna_daging = WarnaDaging::find($id);
         $warna_daging->delete();
-        return redirect('/warna_daging');
+        return redirect('/warna_daging')->with('status', 'Data berhasil dihapus');
     } 
 }
