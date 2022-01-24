@@ -9,6 +9,7 @@ use App\Bentuk;
 use App\Ukuran;
 use App\WarnaKulit;
 use App\WarnaDaging;
+use App\User;
 
 class VarietasController extends Controller
 {
@@ -102,4 +103,24 @@ class VarietasController extends Controller
         $varietas->delete();
         return redirect('/varietas')->with('status','Data berhasil dihapus');
     } 
+
+    public function index()
+    {
+        $varietas = Varietas::count();
+        $bentuk = Bentuk::count();
+        $ukuran = Ukuran::count();
+        $warna_kulit = WarnaKulit::count();
+        $warna_daging = WarnaDaging::count();
+        $user = User::count();
+        return view('dashboard',
+            ['varietas'=> $varietas, 
+            'bentuk'=> $bentuk,
+            'ukuran'=> $ukuran, 
+            'warna_kulit'=> $warna_kulit,
+            'warna_daging'=> $warna_daging,
+            'user'=> $user]
+        );
+        // $varietas = Varietas::all();
+        // return view('dashboard', ['varietas'=> $varietas]);
+    }
 }

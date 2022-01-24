@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/datavarietas', 'HomeController@varietas');
 Route::get('/rekomendasi', 'HomeController@rekomendasi');
 
+Route::get('/dashboard', 'VarietasController@index')->name('dashboard');
+
 Route::get('/varietas', 'VarietasController@getAll')->name('varietas');
 Route::get('/varietas-{id}', 'VarietasController@getById');
 Route::get('/add-varietas', 'VarietasController@add');
