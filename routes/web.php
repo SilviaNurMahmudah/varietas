@@ -18,6 +18,8 @@ Route::get('/', function() {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/datavarietas', 'HomeController@varietas');
+Route::get('/rekomendasi', 'HomeController@rekomendasi');
 
 Route::get('/varietas', 'VarietasController@getAll')->name('varietas');
 Route::get('/varietas-{id}', 'VarietasController@getById');
