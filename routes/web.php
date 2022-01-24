@@ -58,3 +58,10 @@ Route::post('/create-warna_daging', 'WDagingController@create');
 Route::get('/edit-warna_daging-{id}', 'WDagingController@edit');
 Route::post('/update-warna_daging-{id}', 'WDagingController@update');
 Route::get('/delete-warna_daging-{id}', 'WDagingController@delete');
+
+Route::get('/users', 'UserController@getAll')->name('User');
+Route::get('/add-user', 'UserController@add');
+Route::post('/create-user', 'UserController@create');
+Route::get('/edit-user-{id}', 'UserController@edit');
+Route::post('/update-user-{id}', 'UserController@update');
+Route::get('/delete-user-{id}', 'UserController@delete');
