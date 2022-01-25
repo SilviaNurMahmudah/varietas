@@ -8,7 +8,7 @@ use App\User;
 class UserController extends Controller
 {
     public function getAll(){
-        $users = User::all();
+        $users = User::paginate(2);
         return view('kelolauser.user',['users'=> $users]);
     }
     public function add(){

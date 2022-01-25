@@ -40,21 +40,24 @@
                       </div>
                       <div class="row">
                         <div class="form-group col-md-6 col-xs-12">
-                          <label for="inputName">Email</label>
+                          <label for="inputEmail">Email</label>
                           <input type="text" class="form-control" required="required" name="email" placeholder="Masukkan Email"></br>
                         </div>
                       </div>
                       <div class="row">
                         <div class="form-group col-md-6 col-xs-12">
-                          <label for="inputName">Password</label>
+                          <label for="inputPassword">Password</label>
                           <input type="text" class="form-control" required="required" name="password" placeholder="Masukkan Password"></br>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="form-group col-md-6 col-xs-12">
-                          <label for="inputName">Roles</label>
-                          <input type="text" class="form-control" required="required" name="roles" placeholder="Masukkan Roles"></br>
-                        </div>
+                      <div class="form-group col-md-6 col-xs-12">
+                        <label for="inputRoles">Roles</label>
+                        <select id="inputRoles" class="form-control custom-select" name="roles">
+                          <option value="-" selected disabled></option>
+                          <option value="Admin">Admin</option>
+                          <option value="Operator">Operator</option>
+                          <option value="User">User</option>
+                        </select>
                       </div>
                       <button type="submit" name="add" class="btn btn-default pull-left btn-flat"><i class="nav-icon fas fa-save"> Simpan</i></button>
                     </div>

@@ -40,21 +40,24 @@
                       </div>
                       <div class="row">
                         <div class="form-group col-md-6 col-xs-12">
-                          <label for="inputName">Email</label>
+                          <label for="inputEmail">Email</label>
                           <input type="text" class="form-control" required="required" name="email" value="{{$users->email}}"></br>
                         </div>
                       </div>
                       <div class="row">
                         <div class="form-group col-md-6 col-xs-12">
-                          <label for="inputName">Password</label>
-                          <input type="text" class="form-control" required="required" name="password" value="{{$users->password}}"></br>
+                          <label for="inputPassword">Password</label>
+                          <input type="text" class="form-control" required="required" name="password"></br>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="form-group col-md-6 col-xs-12">
-                          <label for="inputName">Roles</label>
-                          <input type="text" class="form-control" required="required" name="roles" value="{{$users->roles}}"></br>
-                        </div>
+                      <div class="form-group col-md-6 col-xs-12">
+                        <label for="inputRoles">Roles</label>
+                        <select id="inputRoles" class="form-control custom-select" name="roles">
+                          <option value="{{$users->roles}}" selected disabled>{{$users->roles}}</option>
+                          <option value="Admin">Admin</option>
+                          <option value="Operator">Operator</option>
+                          <option value="User">User</option>
+                        </select>
                       </div>
                       <button type="submit" name="edit" class="btn btn-default pull-left btn-flat"><i class="nav-icon fas fa-save"> Edit</i></button>
                     </div>

@@ -13,7 +13,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Kelola User</li>
+            <li class="breadcrumb-item active">Data User</li>
           </ol>
         </div>
       </div>
@@ -43,6 +43,7 @@
                   <th>#</th>
                   <th>Nama</th>
                   <th>Email</th>
+                  <th>Roles</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
@@ -53,6 +54,7 @@
                   <td>{{$i++}}</td>
                   <td>{{$u->name}}</td>
                   <td>{{$u->email}}</td>
+                  <td>{{$u->roles}}</td>
                   <td>
                     <a href="/edit-user-{{$u->id}}"  class="btn btn-warning btn-circle">
                       <i class="fas fa-edit"></i>
@@ -65,6 +67,12 @@
                 @endforeach
                 </tbody>
               </table>
+              <div>
+                Showing {{$users->firstItem()}} to {{$users->lastItem()}} of {{$users->total()}}
+              </div>
+              <div>
+                {{ $users->links() }}
+              </div>
             </div>
             <!-- /.card-body -->
           </div>            
