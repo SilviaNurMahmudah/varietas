@@ -44,6 +44,9 @@ class VarietasController extends Controller
 
     }   
     public function create(Request $request) {
+        if($request->file('image')){
+            $image = $request->file('image')->store('img','public');
+        }
         Varietas::create([
             'varietas' => $request->varietas,
             'bentuk_id' => $request->bentuk_id,
@@ -58,7 +61,7 @@ class VarietasController extends Controller
             'asal_pohon_induk' => $request->asal_pohon_induk,
             'sentra_produksi' => $request->sentra_produksi,
             'tahun_pelepasan' => $request->tahun_pelepasan,
-            'imageUrl' => $request->imageUrl
+            'imageUrl' => $image
         ]);
         return redirect('/varietas')->with('status','Data berhasil ditambahkan');
     }   
@@ -94,13 +97,18 @@ class VarietasController extends Controller
         $varietas->asal_pohon_induk = $request->asal_pohon_induk;
         $varietas->sentra_produksi = $request->sentra_produksi;
         $varietas->tahun_pelepasan = $request->tahun_pelepasan;
-        $varietas->imageUrl = $request->imageUrl;
+        if($varietas->imageUrl && file_exists(storage_path('app/public/'.$varietas->imageUrl))) {
+            \Storage::delete('public/'.$varietas->imageUrl);
+        }
+        $image = $request->file('image')->store('img','public');
+        $varietas->imageUrl = $image;
         $varietas->save();
         return redirect('/varietas')->with('status', 'Data berhasil diedit');
     } 
     public function delete($id){
         $varietas = Varietas::find($id);
         $varietas->delete();
+        \Storage::delete('public/'.$varietas->imageUrl);
         return redirect('/varietas')->with('status','Data berhasil dihapus');
     } 
 

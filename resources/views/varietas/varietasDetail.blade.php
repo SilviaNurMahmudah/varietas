@@ -31,7 +31,7 @@
             <div class="col-12 col-sm-6">
               <h3 class="d-inline-block d-sm-none">{{$varietas->varietas}}</h3>
               <div class="col-12">
-                <img src="{{$varietas->imageUrl}}" class="product-image" alt="Product Image">
+                <img style="width:250px;height;250px" src="{{asset('storage/'.$varietas->imageUrl)}}" class="image" alt="Image">
               </div>
             </div>
             <div class="col-12 col-sm-6">

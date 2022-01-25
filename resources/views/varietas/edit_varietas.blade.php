@@ -10,7 +10,7 @@
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
             <li class="breadcrumb-item active">Edit</li>
           </ol>
         </div>
@@ -29,7 +29,7 @@
             <div class="card-body">
               <div id="main">
                 <div class="container-fluid">
-                  <form class="form-horizontal" action="/update-varietas-{{$varietas->id}}" method="post">
+                  <form class="form-horizontal" action="/update-varietas-{{$varietas->id}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="box-body">
                       <div class="row">
@@ -43,8 +43,8 @@
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
                           <label for="inputBentuk">Bentuk Buah</label>
-                          <select id="inputArea" class="form-control custom-select" name="bentuk">
-                            <option value="{{$varietas->bentuk_id}}" selected disabled>{{$varietas->bentuk->bentuk}}</option>
+                          <select id="inputArea" class="form-control custom-select" name="bentuk_id">
+                            <option value="{{$varietas->bentuk_id}}" selected>{{$varietas->bentuk->bentuk}}</option>
                             @foreach($bentuk as $b)
                             <option value="{{$b->id}}">{{$b->bentuk}}</option>
                             @endforeach
@@ -52,8 +52,8 @@
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
                           <label for="inputUkuran">Ukuran Buah</label>
-                          <select id="inputArea" class="form-control custom-select" name="ukuran">
-                            <option value="{{$varietas->ukuran_id}}" selected disabled>{{$varietas->ukuran->ukuran}}</option>
+                          <select id="inputArea" class="form-control custom-select" name="ukuran_id">
+                            <option value="{{$varietas->ukuran_id}}" selected>{{$varietas->ukuran->ukuran}}</option>
                             @foreach($ukuran as $u)
                             <option value="{{$u->id}}">{{$u->ukuran}}</option>
                             @endforeach
@@ -61,8 +61,8 @@
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
                           <label for="inputWKulit">Warna Kulit</label>
-                          <select id="inputArea" class="form-control custom-select" name="warna_kulit">
-                            <option value="{{$varietas->warna_kulit_id}}" selected disabled>{{$varietas->warna_kulit->warna_kulit}}</option>
+                          <select id="inputArea" class="form-control custom-select" name="warna_kulit_id">
+                            <option value="{{$varietas->warna_kulit_id}}" selected>{{$varietas->warna_kulit->warna_kulit}}</option>
                             @foreach($warna_kulit as $k)
                             <option value="{{$k->id}}">{{$k->warna_kulit}}</option>
                             @endforeach
@@ -70,8 +70,8 @@
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
                           <label for="inputWDaging">Warna Daging</label>
-                          <select id="inputArea" class="form-control custom-select" name="warna_daging">
-                            <option value="{{$varietas->warna_daging_id}}" selected disabled>{{$varietas->warna_daging->warna_daging}}</option>
+                          <select id="inputArea" class="form-control custom-select" name="warna_daging_id">
+                            <option value="{{$varietas->warna_daging_id}}" selected>{{$varietas->warna_daging->warna_daging}}</option>
                             @foreach($warna_daging as $d)
                             <option value="{{$d->id}}">{{$d->warna_daging}}</option>
                             @endforeach
@@ -84,7 +84,7 @@
                         <div class="form-group">
                           <label for="inputArea">Area Pengembangan</label>
                           <select id="inputArea" class="form-control custom-select" name="area_pengembangan">
-                            <option value="{{$varietas->area_pengembangan}}" selected disabled>{{$varietas->area_pengembangan}}</option>
+                            <option value="{{$varietas->area_pengembangan}}" selected>{{$varietas->area_pengembangan}}</option>
                             <option value="Dataran Rendah">Dataran Rendah</option>
                             <option value="Dataran Tinggi">Dataran Tinggi</option>
                           </select>
@@ -110,9 +110,11 @@
                           <input type="text" class="form-control" required="required" name="tahun_pelepasan" value="{{$varietas->tahun_pelepasan}}">
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
-                          <label for="inputGambar">Image</label>
-                          <input type="text" class="form-control" required="required" name="imageUrl" value="{{$varietas->imageUrl}}">
+                          <label for="image">Image</label>
+                          <input type="file" class="form-control" required="required" name="image" value="{{$varietas->imageUrl}}">
                         </div>
+                        <div class="form-group col-md-6 col-xs-12"></div>
+                        <img style="width:150px;height;150px" src="{{asset('storage/'.$varietas->imageUrl)}}">
                       </div>
                       <button type="submit" name="edit" class="btn btn-default pull-left btn-flat"><i class="nav-icon fas fa-save"> Edit</i></button>
                     </div>

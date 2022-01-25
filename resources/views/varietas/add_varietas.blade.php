@@ -10,7 +10,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
               <li class="breadcrumb-item active">Add</li>
             </ol>
           </div>
@@ -29,7 +29,7 @@
             <div class="card-body">
               <div id="main">
                 <div class="container-fluid">
-                  <form class="form-horizontal" action="/create-varietas" method="post">
+                  <form class="form-horizontal" action="/create-varietas" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="box-body">
                       <div class="row">
@@ -110,8 +110,8 @@
                           <input type="number" class="form-control" required="required" name="tahun_pelepasan">
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
-                          <label for="inputGambar">Image</label>
-                          <input type="text" class="form-control" required="required" name="imageUrl">
+                          <label for="image">Image</label>
+                          <input type="file" class="form-control" required="required" name="image">
                         </div>
                       </div>
                       <button type="submit" name="edit" class="btn btn-default pull-left btn-flat"><i class="nav-icon fas fa-save"> Simpan</i></button>
