@@ -21,7 +21,7 @@ class VarietasController extends Controller
         });
     }
     public function getAll(){
-        $varietas = Varietas::with('ukuran','bentuk','warna_daging','warna_kulit')->paginate(2);
+        $varietas = Varietas::with('ukuran','bentuk','warna_daging','warna_kulit');
         return view('varietas.varietas',['varietas'=> $varietas]);
     }
     public function getById($id){

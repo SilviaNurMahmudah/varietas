@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use App\Varietas;
 
 class HomeController extends Controller
 {
@@ -20,7 +21,8 @@ class HomeController extends Controller
     }
     public function varietas()
     {
-        return view('frontend.varietas');
+        $varietas = Varietas::with('ukuran','bentuk','warna_daging','warna_kulit')->paginate(10);
+        return view('frontend.varietas',['varietas'=> $varietas]);
     }
     public function rekomendasi()
     {
