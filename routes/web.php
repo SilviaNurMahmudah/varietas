@@ -19,7 +19,10 @@ Route::get('/', function() {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/datavarietas', 'HomeController@varietas');
+Route::get('/datavarietas-{id}', 'HomeController@varietasId');
 Route::get('/rekomendasi', 'HomeController@rekomendasi');
+Route::get('/varietas-rekomendasi','HomeController@recom');
+Route::get('/varietas-cari','HomeController@cari');
 
 Route::get('/dashboard', 'VarietasController@index')->name('dashboard');
 

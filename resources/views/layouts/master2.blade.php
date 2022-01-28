@@ -104,8 +104,10 @@
 					<div class="search-bar">
 						<div class="search-bar-tablecell">
 							<h3>Search For:</h3>
-							<input type="text" placeholder="Keywords">
-							<button type="submit">Search <i class="fas fa-search"></i></button>
+							<form action="/varietas-cari" method="GET">
+								<input type="text" name="cari" placeholder="Cari Varietas.." value="{{ old('cari') }}">
+								<button type="submit">Search <i class="fas fa-search"></i></button>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -170,11 +172,10 @@
 				<div class="col-lg-6 text-right col-md-12">
 					<div class="social-icons">
 						<ul>
-							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+							<li><a href="https://www.facebook.com/balitjestroindonesia" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://twitter.com/balitjestro" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://instagram.com/balitjestro" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://youtube.com/balitjestro" target="_blank"><i class="fab fa-youtube"></i></a></li>
 						</ul>
 					</div>
 				</div>
