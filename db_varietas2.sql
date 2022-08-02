@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2022 at 05:10 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Waktu pembuatan: 02 Agu 2022 pada 17.42
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_varietas`
+-- Database: `db_varietas2`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bentuks`
+-- Struktur dari tabel `bentuks`
 --
 
 CREATE TABLE `bentuks` (
@@ -36,17 +36,17 @@ CREATE TABLE `bentuks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `bentuks`
+-- Dumping data untuk tabel `bentuks`
 --
 
 INSERT INTO `bentuks` (`id`, `bentuk`, `created_at`, `updated_at`) VALUES
-(1, 'Bulat', '2022-01-23 19:03:18', '2022-01-23 19:03:18'),
-(2, 'Bulat Sedikit Pipih', '2022-01-23 19:03:35', '2022-01-23 19:03:41');
+(1, 'Bulat', '2022-08-02 08:04:43', '2022-08-02 08:04:43'),
+(2, 'Bulat Sedikit Pipih', '2022-08-02 08:05:11', '2022-08-02 08:05:11');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -61,7 +61,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -71,7 +71,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -87,7 +87,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -99,7 +99,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ukurans`
+-- Struktur dari tabel `ukurans`
 --
 
 CREATE TABLE `ukurans` (
@@ -110,17 +110,17 @@ CREATE TABLE `ukurans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `ukurans`
+-- Dumping data untuk tabel `ukurans`
 --
 
 INSERT INTO `ukurans` (`id`, `ukuran`, `created_at`, `updated_at`) VALUES
-(1, 'Sedang', '2022-01-23 19:03:49', '2022-01-23 19:03:49'),
-(2, 'Sedang-Besar', '2022-01-23 19:04:04', '2022-01-23 19:04:04');
+(1, 'Sedang', '2022-08-02 08:05:32', '2022-08-02 08:08:55'),
+(2, 'Sedang-Besar', '2022-08-02 08:07:09', '2022-08-02 08:07:09');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -136,17 +136,18 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `roles`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$8fGzGBAbY5NZ100yXbHyTeyKQLvmECjDKWCCMxTj68Kxzy.K30TQW', 'Admin', NULL, NULL, NULL),
-(2, 'Umi', 'umi12345@gmail.com', NULL, '$2y$10$jEV0H2fixIqJmWuAZfYequsnRDHc1UlX2msGYLwWOMNF6iADD1tcu', 'User', '3ZfHrZCm1k014bXlklg3f9YMMarMxDBdK3dYTU3r0q4GM5TVk1yd1UKeqbNU', '2022-01-23 20:43:25', '2022-01-23 20:43:25');
+(1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$O2gTpaMbuNMeSbvQ6VXMH.3vAmGpXcH2H7P8jXZm2iTorWFl3uwF.', 'Admin', NULL, '2022-08-02 08:03:29', '2022-08-02 08:03:29'),
+(2, 'Operator', 'operator@gmail.com', NULL, '$2y$10$nw9TyZ4dn5VfuEThTDtvjuTilB9RoF4zt5d4iWK7zxuCEMHAO7CFC', 'Operator', NULL, '2022-08-02 08:03:30', '2022-08-02 08:03:30'),
+(3, 'Silvia', 'silvia.mahmudah@gmail.com', NULL, '$2y$10$Ktu0u4Zsf8u5zuge6sF3Fujs75jJ/fwGNt2dlhhGaU3VvNdMJ7yp.', 'User', NULL, '2022-08-02 08:40:42', '2022-08-02 08:40:42');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `varietas`
+-- Struktur dari tabel `varietas`
 --
 
 CREATE TABLE `varietas` (
@@ -170,25 +171,23 @@ CREATE TABLE `varietas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `varietas`
+-- Dumping data untuk tabel `varietas`
 --
 
 INSERT INTO `varietas` (`id`, `varietas`, `ukuran_id`, `bentuk_id`, `warna_kulit_id`, `warna_daging_id`, `cita_rasa`, `produktivitas`, `area_pengembangan`, `ketinggian_awal`, `ketinggian_akhir`, `asal_pohon_induk`, `sentra_produksi`, `tahun_pelepasan`, `imageUrl`, `created_at`, `updated_at`) VALUES
-(1, 'Keprok Batu 55', 1, 1, 3, 1, 'Manis', '40-60kg/pohon/tahun', 'Dataran Tinggi', 800, 1200, 'Batu', 'Batu', 2006, 'img/eJZr6FBEihS1EtkBMPPLpJW2TTiJ3jyYIKLZ57c8.jpg', '2022-01-24 23:19:40', '2022-01-27 20:10:12'),
-(2, 'Keprok Brastepu', 1, 2, 3, 1, 'Manis', '20-30kg/pohon/tahun', 'Dataran Tinggi', 800, 1400, 'Kab Karo', 'Kab Karo', 2008, 'img/asaq4im901RM7M4L3movwhVD6zFyPChwE97zhYM2.jpg', '2022-01-24 23:29:46', '2022-01-26 19:37:28'),
-(4, 'Keprok SoE', 1, 2, 4, 1, 'Manis, sedikit masam dan segar dengan tingkat kemanisan 9-10brix', '20-40kg/pohon/tahun', 'Dataran Tinggi', 800, 1200, 'Kec Mollo Utara, Kab.TTS, NTT', 'TTS dan TTU, NTT', 1998, 'img/TsdNApfqfZRBNcbMVFa2W408D98fM2yTbEdTA6Nk.jpg', '2022-01-26 19:59:14', '2022-01-26 19:59:14'),
-(5, 'Keprok RGL', 2, 2, 2, 1, 'Manis, asam dan segar', '100-150kg/pohon/tahun', 'Dataran Tinggi', 800, 1200, 'Kec. Rimbo Penghadang, Kab. Lebong', 'Kab. Lebong', 2012, 'img/5yxzCsbfdcVK3iAynneR1tvczLBXMOtsge4EONzk.jpg', '2022-01-26 20:06:27', '2022-01-26 20:06:27'),
-(6, 'Siam Madu', 1, 2, 3, 1, 'Manis dan segar', '40-60kg/pohon/tahun', 'Dataran Tinggi', 800, 1200, 'Kab. Karo, Sumut', 'Kab. Karo, Simalungun, Sumut', 1999, 'img/R6mebao2MS5rKUigTjEbnXqp6vxsvEagRJJoFALT.jpg', '2022-01-26 20:10:22', '2022-01-26 20:10:22'),
-(7, 'Keprok Tejakula', 1, 1, 5, 1, 'Manis, asam dan segar', '30-70kg/pohon/tahun', 'Dataran Rendah', 0, 700, 'Kec Tejakula, Kab.Buleleng, Bali', 'Kab. Buleleng', 1997, 'img/6Yd0FjBgIrupl356tEttle42xJUiEIOHdqdXY9iq.jpg', '2022-01-26 20:21:23', '2022-01-26 20:21:23'),
-(8, 'Keprok Pulung', 1, 2, 5, 1, 'Manis, asam dan segar', '70kg/pohon/tahun', 'Dataran Rendah', 0, 700, 'Kec. Pulung, Kab. Ponorogo', 'Kab. Ponorogo', 2006, 'img/RtT1xcF6a6RfYGz9ddCXdxP0LDKyryV4cmZH0fFS.jpg', '2022-01-26 20:23:35', '2022-01-26 20:23:35'),
-(9, 'Siam Pontianak', 1, 1, 5, 1, 'Manis', '70kg/pohon/tahun', 'Dataran Rendah', 0, 700, 'Kalimantan Barat', 'Klaimantan Barat', 2003, 'img/jhim5aM2OtJPq9bUhgjUwKdqqkx2fOok43qMCzUC.jpg', '2022-01-26 20:25:02', '2022-01-26 20:25:02'),
-(10, 'Keprok Kacang Solok', 1, 2, 6, 1, 'Manis, sedikit asam dan segar', '25-40kg/pohon/tahun', 'Dataran Rendah', 0, 1200, 'Kec. Sepuluh Koto, Kab. Solok, Sumbar', 'Kab. Solok', 2008, 'img/alJshIcWrQp8s6ujyrKaQkR2RawuW4afhcCX1fmE.jpg', '2022-01-26 20:28:20', '2022-01-26 20:30:33'),
-(11, 'Keprok Selayar', 1, 2, 6, 1, 'Manis dan segar', '40-60kg/pohon/tahun', 'Dataran Rendah', 0, 800, 'Pulau Selayar, Sulsel', 'Pulau Selayar, Jeneponto, Bulukumba, Bantaeng, Sulsel', 1995, 'img/yMv65wAtAj4HsdqrFuqVTjvw4MSLUQoS8XKKIwWj.jpg', '2022-01-26 20:32:43', '2022-01-26 20:32:43');
+(1, 'Keprok Batu 55', 1, 1, 3, 1, 'Manis', '40-60kg/pohon/tahun', 'Dataran Tinggi', 800, 1200, 'Batu', 'Batu', 2006, 'img/naDMQQn1Pd7engpHjnyATLgAMAeCs2wx7n3QBm9w.jpg', '2022-08-02 08:18:07', '2022-08-02 08:18:07'),
+(2, 'Keprok Brastepu', 1, 2, 3, 1, 'Manis', '20-30kg/pohon/tahun', 'Dataran Tinggi', 800, 1400, 'Kab. Karo', 'Kab. Karo', 2008, 'img/Ws8mlAbLQeOCmMW4cBhDB9OjBLcZyJgyCuelb3Jm.jpg', '2022-08-02 08:20:55', '2022-08-02 08:20:55'),
+(3, 'Keprok SoE', 1, 2, 4, 1, 'Manis, sedikit masam dan segar dengan tingkat kemanisan 9-10brix', '20-40kg/pohon/tahun', 'Dataran Tinggi', 800, 1200, 'Kec Mollo Utara, Kab.TTS, NTT', 'TTS dan TTU, NTT', 1998, 'img/4cuNhN1bDOYvhtqW9WEIz5do5ZqEu86zOgAnRb9c.jpg', '2022-08-02 08:23:20', '2022-08-02 08:23:20'),
+(4, 'Keprok RGL', 2, 2, 2, 1, 'Manis, asam dan segar', '100-150kg/pohon/tahun', 'Dataran Tinggi', 800, 1200, 'Kec. Rimbo Penghadang, Kab. Lebong', 'Kab. Lebong', 2012, 'img/CryBRCbvA8NnzQMf0Jyzzuedwvxu5tsgNgxnN3l4.jpg', '2022-08-02 08:25:20', '2022-08-02 08:25:20'),
+(5, 'Keprok Tejakula', 1, 1, 5, 1, 'Manis, asam dan segar', '30-70kg/pohon/tahun', 'Dataran Rendah', 0, 700, 'Kec. Tejakula, Kab.Buleleng, Bali', 'Kab. Buleleng', 1997, 'img/Ym71VDisxorBw9nb9P0AlpDTPD6JvGnQu3YDAjsN.jpg', '2022-08-02 08:32:13', '2022-08-02 08:32:13'),
+(6, 'Keprok Pulung', 1, 2, 5, 1, 'Manis, asam dan segar', '70kg/pohon/tahun', 'Dataran Rendah', 0, 700, 'Kec. Pulung, Kab. Ponorogo', 'Kab. Ponorogo', 2006, 'img/ab9dajhUEqIOwM3LldBXxj9FYfWz3uSAFruN3DiD.jpg', '2022-08-02 08:34:28', '2022-08-02 08:34:28'),
+(7, 'Siam Pontianak', 1, 1, 5, 1, 'Manis', '70kg/pohon/tahun', 'Dataran Rendah', 0, 700, 'Kalimantan Barat', 'Kalimantan Barat', 2003, 'img/IgUislmDQicAsMGERxKANSELiurrdyOntoI0obHT.jpg', '2022-08-02 08:36:48', '2022-08-02 08:36:48'),
+(8, 'Keprok Kacang Solok', 1, 2, 6, 1, 'Manis, sedikit asam dan segar', '25-40kg/pohon/tahun', 'Dataran Rendah', 0, 1200, 'Kec. Sepuluh Koto, Kab. Solok, Sumbar', 'Kab. Solok', 2008, 'img/7xSfYkuyxpi9ugh7jd2e8cce3nwn7ZLcXwpBQy3a.jpg', '2022-08-02 08:39:26', '2022-08-02 08:39:26');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `warna_dagings`
+-- Struktur dari tabel `warna_dagings`
 --
 
 CREATE TABLE `warna_dagings` (
@@ -199,17 +198,17 @@ CREATE TABLE `warna_dagings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `warna_dagings`
+-- Dumping data untuk tabel `warna_dagings`
 --
 
 INSERT INTO `warna_dagings` (`id`, `warna_daging`, `created_at`, `updated_at`) VALUES
-(1, 'Oranye', '2022-01-23 19:06:20', '2022-01-23 19:06:20'),
-(2, 'Kuning-Oranye', '2022-01-23 19:06:36', '2022-01-23 19:06:36');
+(1, 'Oranye', '2022-08-02 08:09:30', '2022-08-02 08:09:30'),
+(2, 'Kuning-Oranye', '2022-08-02 08:09:46', '2022-08-02 08:09:46');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `warna_kulits`
+-- Struktur dari tabel `warna_kulits`
 --
 
 CREATE TABLE `warna_kulits` (
@@ -220,60 +219,61 @@ CREATE TABLE `warna_kulits` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `warna_kulits`
+-- Dumping data untuk tabel `warna_kulits`
 --
 
 INSERT INTO `warna_kulits` (`id`, `warna_kulit`, `created_at`, `updated_at`) VALUES
-(1, 'Kuning', '2022-01-23 19:04:31', '2022-01-23 19:04:31'),
-(2, 'Oranye', '2022-01-23 19:04:44', '2022-01-23 19:04:44'),
-(3, 'Kuning-Oranye', '2022-01-23 19:04:53', '2022-01-23 19:04:53'),
-(4, 'Oranye-Kemerahan', '2022-01-23 19:05:08', '2022-01-23 19:05:08'),
-(5, 'Kuning Kehijauan', '2022-01-23 19:05:24', '2022-01-23 19:05:24'),
-(6, 'Hijau Kekuningan', '2022-01-23 19:05:51', '2022-01-23 19:05:51');
+(1, 'Kuning', '2022-08-02 08:10:17', '2022-08-02 08:10:17'),
+(2, 'Oranye', '2022-08-02 08:10:38', '2022-08-02 08:10:38'),
+(3, 'Kuning-Oranye', '2022-08-02 08:10:57', '2022-08-02 08:10:57'),
+(4, 'Oranye-Kemerahan', '2022-08-02 08:11:15', '2022-08-02 08:11:15'),
+(5, 'Kuning Kehijauan', '2022-08-02 08:11:42', '2022-08-02 08:11:42'),
+(6, 'Kuning Kehijauan', '2022-08-02 08:11:46', '2022-08-02 08:11:46'),
+(7, 'Hijau Kekuningan', '2022-08-02 08:12:41', '2022-08-02 08:12:41');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `bentuks`
+-- Indeks untuk tabel `bentuks`
 --
 ALTER TABLE `bentuks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `ukurans`
+-- Indeks untuk tabel `ukurans`
 --
 ALTER TABLE `ukurans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- Indexes for table `varietas`
+-- Indeks untuk tabel `varietas`
 --
 ALTER TABLE `varietas`
   ADD PRIMARY KEY (`id`),
@@ -283,75 +283,75 @@ ALTER TABLE `varietas`
   ADD KEY `varietas_warna_daging_id_foreign` (`warna_daging_id`);
 
 --
--- Indexes for table `warna_dagings`
+-- Indeks untuk tabel `warna_dagings`
 --
 ALTER TABLE `warna_dagings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `warna_kulits`
+-- Indeks untuk tabel `warna_kulits`
 --
 ALTER TABLE `warna_kulits`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `bentuks`
+-- AUTO_INCREMENT untuk tabel `bentuks`
 --
 ALTER TABLE `bentuks`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `ukurans`
+-- AUTO_INCREMENT untuk tabel `ukurans`
 --
 ALTER TABLE `ukurans`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `varietas`
+-- AUTO_INCREMENT untuk tabel `varietas`
 --
 ALTER TABLE `varietas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `warna_dagings`
+-- AUTO_INCREMENT untuk tabel `warna_dagings`
 --
 ALTER TABLE `warna_dagings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `warna_kulits`
+-- AUTO_INCREMENT untuk tabel `warna_kulits`
 --
 ALTER TABLE `warna_kulits`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `varietas`
+-- Ketidakleluasaan untuk tabel `varietas`
 --
 ALTER TABLE `varietas`
   ADD CONSTRAINT `varietas_bentuk_id_foreign` FOREIGN KEY (`bentuk_id`) REFERENCES `bentuks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,

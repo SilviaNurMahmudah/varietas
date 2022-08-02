@@ -35,7 +35,7 @@
                       <div class="row">
                         <div class="form-group col-md-6 col-xs-12">
                           <label for="inputName">Ukuran Buah</label>
-                          <input type="text" class="form-control" required="required" name="bentuk" value="{{$ukuran->ukuran}}"></br>
+                          <input type="text" class="form-control" required="required" name="ukuran" value="{{$ukuran->ukuran}}"></br>
                         </div>
                       </div>
                       <button type="submit" name="edit" class="btn btn-default pull-left btn-flat"><i class="nav-icon fas fa-save"> Edit</i></button>
