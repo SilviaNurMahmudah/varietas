@@ -7,8 +7,12 @@ use App\User;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function getAll(){
-        $users = User::paginate(2);
+        $users = User::paginate(10);
         return view('kelolauser.user',['users'=> $users]);
     }
     public function add(){

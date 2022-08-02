@@ -62,9 +62,6 @@
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
         <div class="info">
           <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
@@ -81,7 +78,7 @@
               </p>
             </a>
           </li>
-          @can('manage')
+          @if(auth()->user()->roles == 'Admin' || auth()->user()->roles == 'Operator')
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -105,6 +102,7 @@
               </li>
             </ul>
           </li>
+          @endif
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-lemon"></i>
@@ -114,18 +112,22 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              @if(auth()->user()->roles == 'Admin' || auth()->user()->roles == 'Operator')
               <li class="nav-item">
                 <a href="{{ route('bentuk') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Bentuk Buah</p>
                 </a>
               </li>
+              @endif
+              @if(auth()->user()->roles == 'Admin')
               <li class="nav-item">
                 <a href="/add-bentuk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>
               </li>
+              @endif
             </ul>
           </li>
           <li class="nav-item">
@@ -137,18 +139,22 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              @if(auth()->user()->roles == 'Admin' || auth()->user()->roles == 'Operator')
               <li class="nav-item">
                 <a href="{{ route('ukuran') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ukuran Buah</p>
                 </a>
               </li>
+              @endif
+              @if(auth()->user()->roles == 'Admin')
               <li class="nav-item">
                 <a href="/add-ukuran" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>
               </li>
+              @endif
             </ul>
           </li>
           <li class="nav-item">
@@ -160,18 +166,22 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              @if(auth()->user()->roles == 'Admin' || auth()->user()->roles == 'Operator')
               <li class="nav-item">
                 <a href="{{ route('warna_kulit') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Warna Kulit Buah</p>
                 </a>
               </li>
+              @endif
+              @if(auth()->user()->roles == 'Admin')
               <li class="nav-item">
                 <a href="/add-warna_kulit" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>
               </li>
+              @endif
             </ul>
           </li>
           <li class="nav-item">
@@ -183,20 +193,25 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              @if(auth()->user()->roles == 'Admin' || auth()->user()->roles == 'Operator')
               <li class="nav-item">
                 <a href="{{ route('warna_daging') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Warna Daging Buah</p>
                 </a>
               </li>
+              @endif
+              @if(auth()->user()->roles == 'Admin')
               <li class="nav-item">
                 <a href="/add-warna_daging" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>
               </li>
+              @endif
             </ul>
           </li>
+          @if(auth()->user()->roles == 'Admin')
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
@@ -220,7 +235,7 @@
               </li>
             </ul>
           </li>
-          @endcan
+          @endif
           <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}"
                 onclick="event.preventDefault();

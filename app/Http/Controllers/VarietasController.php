@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
 use App\Varietas;
 use App\Bentuk;
 use App\Ukuran;
@@ -15,10 +14,7 @@ class VarietasController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(function($request, $next){
-            if(Gate::allows('manage')) return $next($request);
-            abort(403, 'Anda tidak memiliki cukup hak akses');
-        });
+        $this->middleware('auth');
     }
     public function getAll(){
         $varietas = Varietas::with('ukuran','bentuk','warna_daging','warna_kulit')->paginate(10);

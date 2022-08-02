@@ -42,7 +42,9 @@
                 <tr>
                   <th>#</th>
                   <th>Warna Kulit Buah</th>
+                  @if(auth()->user()->roles == 'Admin')
                   <th>Aksi</th>
+                  @endif
                 </tr>
                 </thead>
                 <tbody>
@@ -51,6 +53,7 @@
                 <tr>
                   <td>{{$i++}}</td>
                   <td>{{$k->warna_kulit}}</td>
+                  @if(auth()->user()->roles == 'Admin')
                   <td>  
                     <a href="/edit-warna_kulit-{{$k->id}}"   class="btn btn-warning btn-circle">
                       <i class="fas fa-edit"></i>
@@ -59,6 +62,7 @@
                       <i class="fas fa-trash"></i>
                     </a>
                   </td>
+                  @endif
                 </tr>
                 @endforeach
                 </tbody>

@@ -9,7 +9,7 @@
 					<div class="hero-text">
 						<div class="hero-text-tablecell">
 							<p class="subtitle">Balitjestro</p>
-							<h1>VARIETAS BUAH</h1>
+							<h1>VARIETAS BUAH JERUK</h1>
 							<div class="hero-btns">
 								<a href="/datavarietas" class="boxed-btn">Data Varietas</a>
 								@can('user-display')
